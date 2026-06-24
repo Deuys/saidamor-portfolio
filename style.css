@@ -2,24 +2,24 @@
 1. Variables CSS
 2. Reset & Base
 3. Typography
-4. Accessibility
-5. Layout
+4. Layout
+5. Accessibility
 6. Header & Navigation
 7. Hero
 8. Buttons
-9. Sections
-10. About
-11. Skills
-12. Projects
-13. Timeline
-14. Contact
-15. Footer
-16. Components
-17. Animations
-18. Utilities
-19. Light Theme
-20. Dark Theme
-21. Responsive
+9. Terminal
+10. Sections
+10.1. About
+10.2. Skills
+10.3. Projects
+10.4. Contact
+11. Footer
+12. Composants UI
+13. Dark Theme
+14. Light Theme
+15.Animations et Effects
+16. Mentions légales
+17. Responsive
 */
 /*-----------------------------------------------  Variables CSS N°1 -------------------------------------------------- */
 @font-face {
@@ -76,7 +76,7 @@
   --space-2xl: 4rem;
   --space-3xl: 6rem;
 
-  /* ----------------------------------- Typography -------*/
+  /* ----------------------- Typography -------*/
 
   --font:
     "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
@@ -84,17 +84,17 @@
   --font-mono:
     "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", Consolas, monospace;
 
-  /* ----------------------------------- Radius -----------*/
+  /* ------------------------- Radius ----*/
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 16px;
   --radius-xl: 20px;
 
-  /*----------------------------------- Transition ------*/
+  /*--------------------------Transition ------*/
   --transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  /*------------------------------------ Nav */
+  /*---------------------------- Nav ---*/
   --nav-h: 64px;
 }
 /* ------------------------------------- Reset & Base N°2 ------------------------------------------------ */
@@ -167,7 +167,7 @@ button {
   max-width: 480px;
 }
 
-/* ------------------------------------------------------ Layout N°3 ---------------------------------------- */
+/* ------------------------------------------------------ Layout N°4 ---------------------------------------- */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -196,11 +196,8 @@ button {
 .section-header {
   margin-bottom: var(--space-2xl);
 }
-/* ----------------------------------- Accessibility N°4 ---------------------------------------------------- */
 
-/*- ----------------------------------------- Reset & Base ----------------------------------------------------------*/
-
-/* ------------------------------------------- Accessibilité ------------------------------------------------*/
+/* ------------------------------------------- Accessibilité N°5------------------------------------------------*/
 
 :focus-visible {
   outline: 2px solid var(--accent);
@@ -221,9 +218,7 @@ button {
   }
 }
 
-/* ---------------------------------------------- Typographie N°2 ---------------------------------------------------*/
-
-/* ------------------------------------------ Header & Navigation N°4 ----------------------------------- */
+/* ------------------------------------------ Header & Navigation N°6 ----------------------------------- */
 
 .navbar {
   position: fixed;
@@ -398,7 +393,7 @@ button {
   transform: translateY(-6.5px) rotate(-45deg);
 }
 
-/* ----------------------------------- Hero Section N°5 ----------------------------------- */
+/* ---------------------------------------------------- Hero Section N°7 ----------------------------------- */
 
 .hero {
   min-height: 80vh;
@@ -510,7 +505,7 @@ button {
   align-items: center;
 }
 
-/* -------------------------------------------------- Buttons N°6 -------------------------------------------------- */
+/* -------------------------------------------------- Buttons N°8 -------------------------------------------------- */
 
 .btn {
   display: inline-flex;
@@ -571,7 +566,7 @@ button {
   transform: translateY(1px);
 }
 
-/* ------------------------------------------- Terminal N°7 ------------------------------------------- */
+/* ------------------------------------------- Terminal N°9 ------------------------------------------- */
 .terminal {
   width: 100%;
   max-width: 500px;
@@ -668,9 +663,9 @@ button {
   animation: blink 1s step-end infinite;
   color: var(--text-primary);
 }
+/* ------------------------------------------------ Section N°10 -------------------------------------- */
 
-/* ---------------------------------------------- About Section N°8 ----------------------------------- */
-
+/* ----------------------- About Section ------------ */
 .about-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -759,7 +754,7 @@ button {
   line-height: 1.4;
 }
 
-/* ---------------------------------------------- Projects Section N°9 -------------------------------------------------*/
+/* -------------------- Projects Section ---------------------*/
 
 .projects-grid {
   display: grid;
@@ -904,8 +899,7 @@ button {
 .card-muted:hover {
   opacity: 0.85;
 }
-/* ------------------------------------------- Skills Section N°10 ------------------------------------------ */
-
+/* --------------------- Skills Section --------------------*/
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1015,7 +1009,7 @@ button {
   margin-top: 1rem;
 }
 
-/* ----------------------------------- Contact Section N°11 ----------------------------------- */
+/* --------------------- Contact Section  ---------------- */
 
 .contact-inner {
   max-width: 640px;
@@ -1152,7 +1146,7 @@ button {
 .footer-links a:focus-visible::after {
   width: 100%;
 }
-/* -------------------------------- Composants UI N°13 -------------------------------------------*/
+/* -------------------------------- Composants UI N°12 -------------------------------------------*/
 .tag {
   display: inline-flex;
   align-items: center;
@@ -1178,7 +1172,7 @@ button {
   flex-shrink: 0;
   object-fit: contain;
 }
-/* ----------------------------------- Dark Theme N°14 ----------------------------------- */
+/* ----------------------------------- Dark Theme N°13 ----------------------------------- */
 [data-theme="dark"] .project-tags,
 [data-theme="dark"] .skills-tags {
   position: relative;
@@ -1423,7 +1417,7 @@ button {
     inset 0 -1px 0 rgba(0, 0, 0, 0.45),
     0 12px 28px rgba(0, 0, 0, 0.45),
     0 24px 48px rgba(0, 0, 0, 0.55),
-    0 0 12px rgba(255, 255, 255, 0.12); /* AURA */
+    0 0 12px rgba(255, 255, 255, 0.12);
 
   transform: translateY(-2px);
 }
@@ -1445,7 +1439,7 @@ button {
     0 -1px 0 rgba(0, 0, 0, 0.5) inset,
     0 8px 16px rgba(0, 0, 0, 0.65),
     0 16px 32px rgba(0, 0, 0, 0.55),
-    0 0 12px rgba(255, 255, 255, 0.07); /* aura */
+    0 0 12px rgba(255, 255, 255, 0.07);
 
   transform: translateY(-2px);
 }
@@ -1484,7 +1478,7 @@ button {
   transform: translateY(-6px);
 }
 
-/* ----------------------------------- Light Theme N°15 ----------------------------------- */
+/* ----------------------------------------------------- Light Theme N°14 --------------------------------------------- */
 
 [data-theme="light"] {
   --bg: #ffffff;
@@ -1747,7 +1741,7 @@ button {
     0 8px 16px rgba(15, 23, 42, 0.18),
     0 1px 0 rgba(255, 255, 255, 1) inset;
 }
-/*------------------------ BTN-CV----------------*/
+/*----------------------------------------*/
 [data-theme="light"] .btn-cv {
   color: #000212;
 
@@ -1810,7 +1804,7 @@ button {
   transform: translateY(-2px);
 }
 
-/* ----------------------------------- Animations & Effects N°16 ----------------------------------- */
+/* ----------------------------------- Animations & Effects N°15 ----------------------------------- */
 
 .reveal {
   opacity: 0;
@@ -1877,6 +1871,73 @@ button {
   to {
     opacity: 1;
   }
+}
+/* ----------------------------------- Mentions légales ----------------------------------- */
+
+.legal-page {
+  min-height: 100vh;
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+}
+
+.legal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.legal-heading {
+  margin-bottom: 1rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.legal-text {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  max-width: 900px;
+}
+
+.legal-page a {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.25);
+  text-underline-offset: 4px;
+
+  transition:
+    color 0.25s ease,
+    text-decoration-color 0.25s ease;
+}
+
+.legal-page a:hover {
+  color: var(--text-primary);
+  text-decoration-color: rgba(255, 255, 255, 0.8);
+}
+
+.legal-page .btn-cv {
+  text-decoration: none;
+}
+
+.legal-section {
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.legal-section:first-of-type {
+  border-top: none;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.legal-update {
+  margin-top: 3rem;
+  color: var(--text-muted);
+  font-size: 0.875rem;
 }
 
 /* ---------------------------------------------- Responsive N°17 --------------------------------------------- */
@@ -1998,6 +2059,18 @@ button {
 
   .footer-links {
     justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .legal-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .legal-page {
+    padding-top: 4rem;
   }
 }
 /* --------------------------------------*/
