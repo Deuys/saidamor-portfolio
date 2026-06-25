@@ -130,19 +130,32 @@ const NavManager = (() => {
   }
 
   function updateActive() {
-    const scrollY = window.scrollY + window.innerHeight * 0.35;
-    const sections = document.querySelectorAll("section[id]");
+  let current = null;
 
-    sections.forEach((section) => {
-      const top = section.offsetTop;
-      const height = section.offsetHeight;
-      const id = section.getAttribute("id");
-      const link = document.querySelector(`.nav-link[href="#${id}"]`);
-      if (!link) return;
-      link.classList.toggle("active", scrollY >= top && scrollY < top + height);
-    });
+  const scrollY = window.scrollY + window.innerHeight * 0.35;
+  const sections = document.querySelectorAll("section[id]");
+
+  sections.forEach((section) => {
+    const top = section.offsetTop;
+    const height = section.offsetHeight;
+    const id = section.getAttribute("id");
+
+    if (scrollY >= top && scrollY < top + height) {
+      current = id;
+    }
+  });
+
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+    current = "contact";
   }
 
+  navLinks.forEach((link) => {
+    link.classList.toggle(
+      "active",
+      link.getAttribute("href") === `#${current}`
+    );
+  });
+}
   function init() {
     hamburger.addEventListener("click", toggleMenu);
 
