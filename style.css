@@ -2073,6 +2073,15 @@ button {
     padding-top: 4rem;
   }
 }
+@media (max-width: 768px) {
+  .hero {
+    padding-bottom: 3rem;
+  }
+
+  .social-links {
+    margin-bottom: 1.5rem;
+  }
+}
 /* --------------------------------------*/
 @media (max-width: 600px) {
   .skills-grid {
